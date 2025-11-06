@@ -1,0 +1,26 @@
+.container {
+    width: 200px;
+    margin: auto;
+    border: 200px;
+    padding: 100px;
+    text-align: center;
+}
+.container img {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+}
+.container ul{
+    list-style-type: none;
+    padding: 0;
+}
+.container li a {
+    padding: 10px;
+    display: block;
+    background-color: rgb(0, 0, 0);
+    color: aquamarine;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    text-align: center;
+}
