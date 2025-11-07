@@ -15,7 +15,7 @@ My learning path to become a fullstack developer. Learning by building real proj
   - CSS Centering techniques
   - Basic layout fundamentals
 - **Status:** ✅ COMPLETED
-- **View:** [Live Demo](#) | [Source Code](./01-bio-link-page)
+- View: [Live Demo](https://ahmadzaky-dev.github.io/fullstack-learning-journey/01-bio-link-page/) | [Source Code](./01-bio-link-page)
 
 ---
 
