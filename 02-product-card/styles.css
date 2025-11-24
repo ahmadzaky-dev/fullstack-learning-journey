@@ -26,3 +26,20 @@
     margin-top: 10px;
     border-radius: 5px;
 }
+
+@media (max-width: 650px) {
+    .card {
+        flex-direction: column;
+        width: 90%; 
+        padding: 15px;
+    }
+
+    .card img {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    
+    #info {
+        text-align: center; 
+    }
+}
