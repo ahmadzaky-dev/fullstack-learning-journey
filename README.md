@@ -4,7 +4,7 @@ My learning path to become a fullstack developer. Learning by building real proj
 
 ## Progress Tracker
 
-**Overall Progress:** 10%
+**Overall Progress:** 20%
 
 ### ✅ Completed Projects
 
@@ -19,13 +19,13 @@ My learning path to become a fullstack developer. Learning by building real proj
 
 ---
 
-### 🚧 In Progress
-
 #### 2. Product Card
 - **Tech Stack:** HTML, CSS (Flexbox)
-- **Learning Goals:** CSS Flexbox for horizontal layouts
-- **Status:** 🚧 IN PROGRESS
-
+- **Learning Goals:** - CSS Flexbox for alignment
+  - Working with images
+  - Button styling & hover effects
+- **Status:** ✅ COMPLETED
+- **View:** [Live Demo](https://ahmadzaky-dev.github.io/fullstack-learning-journey/02-product-card/) | [Source Code](./02-product-card)
 ---
 
 ## Learning Method
@@ -34,4 +34,4 @@ Using AI-assisted learning with structured projects and code reviews. Each proje
 
 ---
 
-*Last updated: 6 November 2025*
+*Last updated: 24 November 2025*
