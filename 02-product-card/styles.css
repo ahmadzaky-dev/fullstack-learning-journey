@@ -15,7 +15,7 @@
     border-radius: 10px;
 }
 #info {
-    flex: 1px;
+    flex: 1;
 }
 .card a {
     display: inline-block;
