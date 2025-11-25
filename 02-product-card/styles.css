@@ -47,7 +47,7 @@
     display: flex;
     align-items: center;
     gap: 15px;
-    margin-bottom: 15px; /* Jarak ke tombol beli */
+    margin-bottom: 15px; 
 }
 
 .quantity-control button {
