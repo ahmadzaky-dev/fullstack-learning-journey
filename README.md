@@ -15,7 +15,7 @@ My learning path to become a fullstack developer. Learning by building real proj
   - CSS Centering techniques
   - Basic layout fundamentals
 - **Status:** ✅ COMPLETED
-- View: [Live Demo](https://ahmadzaky-dev.github.io/fullstack-learning-journey/01-bio-link-page/) | [Source Code](./01-bio-link-page)
+- **View:** [Live Demo](https://ahmadzaky-dev.github.io/fullstack-learning-journey/01-bio-link-page/) | [Source Code](./01-bio-link-page)
 
 ---
 
@@ -30,10 +30,20 @@ My learning path to become a fullstack developer. Learning by building real proj
 
 ---
 
+#### 3. Simple To-Do List
+- **Tech Stack:** HTML, CSS, JavaScript (DOM Manipulation)
+- **Learning Goals:** - DOM Manipulation (Create, Read, Delete elements)
+  - Event Listeners (Click events)
+  - Input handling
+- **Status:** ✅ COMPLETED
+- **View:** [Live Demo](https://ahmadzaky-dev.github.io/fullstack-learning-journey/03-todo-list/) | [Source Code](./03-todo-list)
+
+---
+
 ## Learning Method
 
 Using AI-assisted learning with structured projects and code reviews. Each project must pass review before moving to the next.
 
 ---
 
-*Last updated: 25 November 2025*
+*Last updated: 27 November 2025*
