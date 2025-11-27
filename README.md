@@ -32,9 +32,9 @@ My learning path to become a fullstack developer. Learning by building real proj
 
 #### 3. Simple To-Do List
 - **Tech Stack:** HTML, CSS, JavaScript (DOM Manipulation)
-- **Learning Goals:** - DOM Manipulation (Create, Read, Delete elements)
-  - Event Listeners (Click events)
-  - Input handling
+- **Learning Goals:** - **DOM Creation:** Using `createElement` & `appendChild` to add tasks dynamically.
+  - **Event Handling:** Managing click events for adding and deleting items.
+  - **Style Manipulation:** Using `classList.toggle` for completed tasks.
 - **Status:** ✅ COMPLETED
 - **View:** [Live Demo](https://ahmadzaky-dev.github.io/fullstack-learning-journey/03-todo-list/) | [Source Code](./03-todo-list)
 
