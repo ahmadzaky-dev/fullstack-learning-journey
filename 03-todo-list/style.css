@@ -1,0 +1,65 @@
+.container { 
+  width: 300px;
+  border: 2px solid #ffa047; 
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  padding: 50px;
+  margin: 80px auto; 
+  text-align: center; 
+  border-radius: 10px; 
+  background-color: white; 
+}
+#list-container li {
+    list-style: none; 
+    font-size: 17px;
+    padding: 12px 8px 12px 50px; 
+    user-select: none; 
+    cursor: pointer; 
+    position: relative; 
+    text-align: left; 
+}
+
+#list-container li:hover {
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+#list-container li span {
+    position: absolute; 
+    right: 0; 
+    top: 5px; 
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px; 
+    text-align: center;
+    border-radius: 50%; 
+}
+
+#list-container li span:hover {
+    background-color: #edeef0; 
+}
+#list-container li.checked {
+    text-decoration: line-through;
+    color: #888; 
+    background-color: #e0e0e0;
+}
+.container h1 {
+    color: #ffa047;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Styling tambahan untuk input dan button */
+#text-box {
+    border-color: #ffa047;
+}
+
+#btn-add {
+    background-color: #ffa047;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#btn-add:hover {
+    opacity: 0.9;
+}
