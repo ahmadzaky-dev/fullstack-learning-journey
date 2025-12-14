@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zaky Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigasi -->
+    <nav>
+        <div class="logo">Zaky.Dev</div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#certificates">Certificates</a></li>
+            <li><a href="#contact-section">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home/Hero Section -->
+    <section id="home">
+        <div class="hero-content">
+            <div class="profile-box">
+                <img src="profile.jpg" alt="Foto Ahmad Zaky">
+            </div>
+
+            <h1>Hi, I'm <span id="nama">...</span></h1>
+            <h3><span id="status">...</span></h3>
+            
+            <p style="margin-top: 10px;">
+                Asal: <strong id="asal"> Jakarta Selatan</strong> | 
+                Kampus: <strong id="kampus">Universitas Indraprasta PGRI</strong>
+            </p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        
+        <div class="about-card">
+            <div class="about-img">
+                <img src="profile.jpg" alt="Ahmad Zaky">
+            </div>
+
+            <div class="about-text">
+                <h3 id="about-title">Loading...</h3>
+                <p id="about-desc">Loading...</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+        <h2>My Projects</h2>
+        
+        <div class="search-box">
+            <input type="text" id="search-input" placeholder="Cari project...">
+            <button id="search-button">Cari</button>
+        </div>
+
+        <div id="project-container" class="grid-container">
+        </div>
+    </section>
+
+    <!-- Certificates Section (BARU) -->
+    <section id="certificates">
+        <h2>My Certificates</h2>
+        <p style="text-align: center; margin-bottom: 30px;">Arahkan kursor untuk melihat detail</p>
+        
+        <div id="certificate-container" class="cert-grid">
+            <!-- Konten sertifikat akan diisi oleh JavaScript -->
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact-section">
+        <h2>Contact Me</h2>
+        <p style="text-align: center; margin-bottom: 20px;">Hubungi saya melalui:</p>
+        
+        <div class="contact-grid">
+            <a href="https://wa.me/6289685134848" target="_blank" class="contact-card wa">
+                <i class="fab fa-whatsapp contact-icon"></i>
+                <h3>WhatsApp</h3>
+                <p>+62 896-8513-4848</p>
+            </a>
+
+            <a href="https://instagram.com/zakyhaddad4" target="_blank" class="contact-card ig">
+                <i class="fab fa-instagram contact-icon"></i>
+                <h3>Instagram</h3>
+                <p>@zakyhaddad4</p>
+            </a>
+
+            <a href="mailto:ahmadzaky797@gmail.com" class="contact-card email">
+                <i class="fas fa-envelope contact-icon"></i>
+                <h3>Email</h3>
+                <p>ahmadzaky797@gmail.com</p>
+            </a>
+
+            <a href="#" class="contact-card linkedin disabled">
+                <i class="fab fa-linkedin-in contact-icon"></i>
+                <h3>LinkedIn</h3>
+                <p>Segera Hadir</p>
+            </a>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
