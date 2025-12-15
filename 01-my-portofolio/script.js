@@ -1,87 +1,133 @@
-// --- 1. DATA STORE (Pakai CONST karena objectnya gak kita ganti-ganti isinya) ---
+// 1. DATA STORE
 const myPortfolio = {
     nama: "Ahmad Zaky",
     umur: 19,
-    status: "Mahasiswa TKJ Semester 3",
+    status: "Mahasiswa Teknik Informatika Semester 3",
     asal: "Jakarta Selatan",
     kampus: "Universitas Indraprasta PGRI",
     
-    // Data About Me
     aboutMe: {
         title: "Hi, I'm Ahmad Zaky. Tech Enthusiast & Learner.",
         desc: "Saya adalah mahasiswa semester 3 jurusan Teknik Komputer dan Jaringan (TKJ) di Universitas Indraprasta PGRI. Memiliki ketertarikan kuat pada infrastruktur jaringan dan dunia pengembangan web. Saat ini sedang fokus mendalami dasar-dasar JavaScript untuk membangun website yang interaktif, sambil terus mengeksplorasi teknologi baru di bidang IT."
     },
 
-    // Data Projects
+    skills: [
+        { name: "HTML", icon: "fab fa-html5", color: "#e34c26" },
+        { name: "CSS", icon: "fab fa-css3-alt", color: "#264de4" },
+        { name: "JavaScript", icon: "fab fa-js", color: "#f0db4f" }
+    ],
+
     projects: [
         { 
             title: "Website Perkenalan Diri", 
             status: "Selesai", 
-            desc: "Website portofolio pertama saya menggunakan HTML, CSS, dan JS Dasar.",
-            link: "index.html" 
+            desc: "Portofolio pertama dengan HTML, CSS, JS.",
+            link: "index.html",
+            image: "project1.jpg" 
         },
         { 
-            title: "Project Berikutnya...", 
+            title: "Wedding Website", 
             status: "Segera Hadir", 
-            desc: "Tunggu karya saya selanjutnya.",
-            link: "#" 
+            desc: "Project latihan.",
+            link: "#",
+            image: "placeholder.jpg"
         }
     ],
 
-    // Data Sertifikat
     certificates: [
-        {
-            id: "01",
-            name: "Sertifikat Dicoding",
-            image: "sertifikat1.jpg", // Pastikan nama file bener
-            color: "#ff6b6b" 
-        },
-        {
-            id: "02",
-            name: "Sertifikat Web",
-            image: "cert-web.png", 
-            color: "#feca57" 
-        },
-        {
-            id: "03",
-            name: "Sertifikat Jaringan",
-            image: "cert-jaringan.jpg", 
-            color: "#4facfe" 
-        },
-        {
-            id: "04",
-            name: "Sertifikat Desain",
-            image: "cert-desain.jpg", 
-            color: "#5f27cd" 
-        }
+        { id: "01", name: "Sertifikat Lsp", image: "sertifikat1.jpg", color: "#ff6b6b" },
+        { id: "02", name: "Sertifikat Pkl", image: "sertifikat2.jpg", color: "#feca57" },
+        { id: "03", name: "Sertifikat Pkl", image: "sertifikat3.jpg", color: "#4facfe" },
     ]
 };
 
-// --- 2. FUNCTION: ISI BIODATA (Pakai CONST buat elemen) ---
+// 2. BIODATA SECTION
 function isiBiodata() {
-    const elemenNama = document.getElementById('nama');
-    const elemenUmur = document.getElementById('umur');
-    const elemenStatus = document.getElementById('status');
-    const elemenAsal = document.getElementById('asal');
-    const elemenKampus = document.getElementById('kampus');
-
-    if (elemenNama) elemenNama.innerHTML = myPortfolio.nama;
-    if (elemenUmur) elemenUmur.innerHTML = myPortfolio.umur + " Tahun";
-    if (elemenStatus) elemenStatus.innerHTML = myPortfolio.status;
-    if (elemenAsal) elemenAsal.innerHTML = myPortfolio.asal;
-    if (elemenKampus) elemenKampus.innerHTML = myPortfolio.kampus;
+    const ids = ['nama', 'umur', 'status', 'asal', 'kampus'];
+    ids.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) {
+            if (id === 'umur') el.innerHTML = myPortfolio[id] + " Tahun";
+            else el.innerHTML = myPortfolio[id];
+        }
+    });
 }
 
-// --- 3. FUNCTION: ISI ABOUT ME ---
+// 3. ABOUT ME SECTION
 function isiAboutMe() {
-    const judulAbout = document.getElementById('about-title');
-    const deskripsiAbout = document.getElementById('about-desc');
+    const descElement = document.getElementById('about-desc');
+    const roleElement = document.getElementById('dynamic-role');
+    
+    // Typing Effect: Deskripsi
+    if (descElement) {
+        const textDeskripsi = myPortfolio.aboutMe.desc;
+        let i = 0;
+        descElement.innerHTML = "";
+        
+        function typeDesc() {
+            if (i < textDeskripsi.length) {
+                descElement.innerHTML += textDeskripsi.charAt(i);
+                i++;
+                setTimeout(typeDesc, 15);
+            }
+        }
+        typeDesc(); 
+    }
 
-    if (judulAbout) judulAbout.innerHTML = myPortfolio.aboutMe.title;
-    if (deskripsiAbout) deskripsiAbout.innerHTML = myPortfolio.aboutMe.desc;
+    // Typing Effect: Role Loop
+    if (roleElement) {
+        const roles = ["Network Engineer", "Web Developer", "Frontend Enthusiast"];
+        let roleIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+
+        function typeRole() {
+            const currentRole = roles[roleIndex];
+            
+            if (isDeleting) {
+                roleElement.textContent = currentRole.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                roleElement.textContent = currentRole.substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            let typeSpeed = 100;
+            if (isDeleting) typeSpeed = 50;
+
+            if (!isDeleting && charIndex === currentRole.length) {
+                typeSpeed = 2000;
+                isDeleting = true;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                roleIndex++;
+                if (roleIndex === roles.length) roleIndex = 0;
+            }
+
+            setTimeout(typeRole, typeSpeed);
+        }
+        typeRole();
+    }
 }
 
-// --- 4. FUNCTION: RENDER PROJECT (OPTIMASI PERFORMA) ---
+// 4. SKILLS SECTION
+function tampilkanSkills() {
+    const container = document.getElementById('skill-container');
+    if (!container) return;
+    let content = "";
+    myPortfolio.skills.forEach(skill => {
+        content += `
+            <div class="skill-card" style="border-color: ${skill.color}">
+                <div class="skill-icon" style="color: ${skill.color}">
+                    <i class="${skill.icon}"></i>
+                </div>
+                <h3>${skill.name}</h3>
+            </div>`;
+    });
+    container.innerHTML = content;
+}
+
+// 5. PROJECTS SECTION
 function tampilkanProject(data) {
     const container = document.getElementById('project-container');
     if (!container) return; 
@@ -89,61 +135,61 @@ function tampilkanProject(data) {
 
     data.forEach(function(p) {
         content += `
-            <div class="card">
-                <h3>${p.title}</h3>
-                <p><strong>Status:</strong> ${p.status}</p>
-                <p>${p.desc}</p>
-                <a href="${p.link}" target="_blank">
-                    Klik untuk melihat >>
-                </a>
+            <div class="book-card">
+                <div class="book-inner">
+                    <div class="book-front">
+                        <h3>${p.title}</h3>
+                        <p class="status">Status: ${p.status}</p>
+                        <p class="desc">${p.desc}</p>
+                        <div class="tap-hint">👇 Klik / Hover untuk buka</div>
+                    </div>
+                    <div class="book-back">
+                        <img src="${p.image}" alt="${p.title}" onerror="this.src='https://via.placeholder.com/300?text=No+Image'">
+                        <a href="${p.link}" target="_blank" class="btn-lihat">Lihat Website</a>
+                    </div>
+                </div>
             </div>
         `;
     });
     container.innerHTML = content;
 }
 
-// --- 5. FUNCTION: RENDER SERTIFIKAT (OPTIMASI PERFORMA) ---
+// 6. CERTIFICATES SECTION
 function tampilkanSertifikat() {
     const container = document.getElementById('certificate-container');
     if (!container) return; 
     let content = "";
-
     myPortfolio.certificates.forEach(function(cert) {
         content += `
             <div class="cert-card" style="background-color: ${cert.color}">
                 <div class="cert-number">${cert.id}</div>
                 <div class="cert-name">${cert.name}</div>
-                <img src="${cert.image}" alt="${cert.name}">
-            </div>
-        `;
+                <img src="${cert.image}" alt="${cert.name}" onerror="this.style.display='none'">
+            </div>`;
     });
     container.innerHTML = content;
 }
 
-// --- 6. SEARCH LOGIC ---
+// 7. SEARCH LOGIC
 const tombolCari = document.getElementById('search-button');
 const inputCari = document.getElementById('search-input');
-
 if (tombolCari) { 
     tombolCari.addEventListener('click', function(event) {
         event.preventDefault(); 
         const keyword = inputCari.value.toLowerCase(); 
-        
-        const hasilPencarian = myPortfolio.projects.filter(function(p) {
-            return p.title.toLowerCase().includes(keyword);
-        });
-
-        tampilkanProject(hasilPencarian);
+        const hasil = myPortfolio.projects.filter(p => p.title.toLowerCase().includes(keyword));
+        tampilkanProject(hasil);
     });
 }
+
+// 8. MAIN EXECUTION
 isiBiodata();
 isiAboutMe();
-tampilkanProject(myPortfolio.projects);
-tampilkanSertifikat();
+tampilkanSkills();
 tampilkanProject(myPortfolio.projects);
 tampilkanSertifikat();
 
-// --- 8. ANIMASI SCROLL (INTERSECTION OBSERVER) 
+// 9. SCROLL ANIMATION
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -151,9 +197,55 @@ const observer = new IntersectionObserver((entries) => {
         }
     });
 });
-const hiddenElements = document.querySelectorAll('.card, .cert-card, .about-card, section h2, .hero-content');
 
+const hiddenElements = document.querySelectorAll('.book-card, .cert-card, .about-card, section h2, .hero-content, .skill-card');
 hiddenElements.forEach((el) => {
     el.classList.add('hidden-element'); 
     observer.observe(el); 
 });
+
+// 10. 3D TILT EFFECT
+setTimeout(() => {
+    const cards = document.querySelectorAll('.book-card');
+
+    cards.forEach(card => {
+        const inner = card.querySelector('.book-inner');
+        let isFlipped = false;
+
+        card.addEventListener('mousemove', (e) => {
+            if (isFlipped) return;
+
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left; 
+            const y = e.clientY - rect.top;  
+
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+
+            const rotateX = (centerY - y) / 10; 
+            const rotateY = (x - centerX) / 10;
+
+            inner.style.transition = 'transform 0.1s ease';
+            inner.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+        });
+
+        card.addEventListener('mouseleave', () => {
+            if (isFlipped) return;
+
+            inner.style.transition = 'transform 0.5s ease';
+            inner.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg)`;
+        });
+        
+        card.addEventListener('click', () => {
+            inner.style.transition = 'transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+            
+            if (isFlipped) {
+                inner.style.transform = `perspective(1000px) rotateY(0deg)`;
+                isFlipped = false;
+            } else {
+                inner.style.transform = `perspective(1000px) rotateY(180deg)`;
+                isFlipped = true;
+            }
+        });
+    });
+}, 1000);

@@ -9,98 +9,110 @@
 </head>
 <body>
 
-    <!-- Navigasi -->
     <nav>
         <div class="logo">Zaky.Dev</div>
         <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#skills">Skills</a></li>
             <li><a href="#certificates">Certificates</a></li>
             <li><a href="#contact-section">Contact</a></li>
         </ul>
     </nav>
 
-    <!-- Home/Hero Section -->
     <section id="home">
-        <div class="hero-content">
-            <div class="profile-box">
-                <img src="profile.jpg" alt="Foto Ahmad Zaky">
+        <div class="hero-container">
+            <div class="hero-text">
+                <h3>Hi, I'm <span id="nama">...</span></h3>
+                <h1 id="status" style="font-size: 2.5rem; margin: 10px 0; color: #4facfe;">...</h1>
+                <p style="margin-bottom: 20px; line-height: 1.6; color: #e0e0e0;">
+                    Asal: <strong id="asal">...</strong> | 
+                    Kampus: <strong id="kampus">...</strong>
+                </p>
+                <div class="btn-group">
+                    <a href="cv-zaky.pdf" download class="btn-primary">Download CV</a>
+                    <a href="#contact-section" class="btn-secondary">Contact Me</a>
+                </div>
             </div>
-
-            <h1>Hi, I'm <span id="nama">...</span></h1>
-            <h3><span id="status">...</span></h3>
-            
-            <p style="margin-top: 10px;">
-                Asal: <strong id="asal"> Jakarta Selatan</strong> | 
-                Kampus: <strong id="kampus">Universitas Indraprasta PGRI</strong>
-            </p>
+            <div class="hero-image">
+                <div class="img-border">
+                    <img src="profile.jpg" alt="Foto Profil">
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- About Section -->
     <section id="about">
-        <h2>About Me</h2>
-        
-        <div class="about-card">
-            <div class="about-img">
-                <img src="profile.jpg" alt="Ahmad Zaky">
+        <h2>About Me</h2> 
+        <div class="network-card">
+            <div class="holo-container">
+                <div class="holo-ring ring-1"></div>
+                <div class="holo-ring ring-2"></div>
+                <div class="holo-ring ring-3"></div>
+                <div class="holo-core">
+                    <i class="fas fa-network-wired"></i> 
+                </div>
             </div>
-
-            <div class="about-text">
-                <h3 id="about-title">Loading...</h3>
-                <p id="about-desc">Loading...</p>
+            <div class="console-container">
+                <div class="console-header">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                    <span class="txt">root@zaky-server:~</span>
+                </div>
+                <div class="console-body">
+                    <h3>>> Hi, I'm Ahmad Zaky.</h3>
+                    <h3 class="typing-role">>> I am a <span id="dynamic-role"></span><span class="cursor">_</span></h3>
+                    <br>
+                    <p id="about-desc" class="code-text"></p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Portfolio Section -->
     <section id="portfolio">
         <h2>My Projects</h2>
-        
         <div class="search-box">
             <input type="text" id="search-input" placeholder="Cari project...">
             <button id="search-button">Cari</button>
         </div>
-
         <div id="project-container" class="grid-container">
-        </div>
+            </div>
     </section>
 
-    <!-- Certificates Section (BARU) -->
+    <section id="skills">
+        <h2>My Skills</h2>
+        <div id="skill-container" class="skill-grid">
+            </div>
+    </section>
+
     <section id="certificates">
         <h2>My Certificates</h2>
         <p style="text-align: center; margin-bottom: 30px;">Arahkan kursor untuk melihat detail</p>
-        
         <div id="certificate-container" class="cert-grid">
-            <!-- Konten sertifikat akan diisi oleh JavaScript -->
-        </div>
+            </div>
     </section>
     
-    <!-- Contact Section -->
     <section id="contact-section">
         <h2>Contact Me</h2>
         <p style="text-align: center; margin-bottom: 20px;">Hubungi saya melalui:</p>
-        
         <div class="contact-grid">
             <a href="https://wa.me/6289685134848" target="_blank" class="contact-card wa">
                 <i class="fab fa-whatsapp contact-icon"></i>
                 <h3>WhatsApp</h3>
                 <p>+62 896-8513-4848</p>
             </a>
-
             <a href="https://instagram.com/zakyhaddad4" target="_blank" class="contact-card ig">
                 <i class="fab fa-instagram contact-icon"></i>
                 <h3>Instagram</h3>
                 <p>@zakyhaddad4</p>
             </a>
-
             <a href="mailto:ahmadzaky797@gmail.com" class="contact-card email">
                 <i class="fas fa-envelope contact-icon"></i>
                 <h3>Email</h3>
                 <p>ahmadzaky797@gmail.com</p>
             </a>
-
             <a href="#" class="contact-card linkedin disabled">
                 <i class="fab fa-linkedin-in contact-icon"></i>
                 <h3>LinkedIn</h3>
