@@ -35,7 +35,7 @@ const myPortfolio = {
     ],
 
     certificates: [
-        { id: "01", name: "Sertifikat Lsp", image: "sertifikat1.jpg", color: "#ff6b6b" },
+        { id: "01", name: "Sertifikat Lsp", image: "sertifikat4.jpg", color: "#ff6b6b" },
         { id: "02", name: "Sertifikat Pkl", image: "sertifikat2.jpg", color: "#feca57" },
         { id: "03", name: "Sertifikat Pkl", image: "sertifikat3.jpg", color: "#4facfe" },
     ]
