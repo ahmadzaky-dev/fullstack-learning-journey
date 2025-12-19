@@ -8,7 +8,7 @@ const myPortfolio = {
     
     aboutMe: {
         title: "Hi, I'm Ahmad Zaky. Tech Enthusiast & Learner.",
-        desc: "Saya adalah mahasiswa semester 3 jurusan Teknik Komputer dan Jaringan (TKJ) di Universitas Indraprasta PGRI. Memiliki ketertarikan kuat pada infrastruktur jaringan dan dunia pengembangan web. Saat ini sedang fokus mendalami dasar-dasar JavaScript untuk membangun website yang interaktif, sambil terus mengeksplorasi teknologi baru di bidang IT."
+        desc: "Saya adalah mahasiswa semester 3 jurusan Teknik Informatika di Universitas Indraprasta PGRI. Memiliki ketertarikan kuat di dunia pengembangan web. Saat ini sedang fokus mendalami dasar-dasar JavaScript untuk membangun website yang interaktif, sambil terus mengeksplorasi teknologi baru di bidang IT."
     },
 
     skills: [
@@ -23,14 +23,14 @@ const myPortfolio = {
             status: "Selesai", 
             desc: "Portofolio pertama dengan HTML, CSS, JS.",
             link: "index.html",
-            image: "project1.jpg" 
+            image: "project1.png" 
         },
         { 
             title: "Wedding Website", 
-            status: "Segera Hadir", 
-            desc: "Project latihan.",
+            status: "Selesai", 
+            desc: "Undangan interaktif dengan animasi amplop.",
             link: "#",
-            image: "placeholder.jpg"
+            image: "project2.png"
         }
     ],
 

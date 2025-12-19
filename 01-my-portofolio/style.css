@@ -189,8 +189,8 @@ section h2 {
     border: 1px solid #1e2a38;
     position: relative;
     background-image: 
-        linear-gradient(rgba(79, 172, 254, 0.05) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(79, 172, 254, 0.05) 1px, transparent 1px);
+    linear-gradient(rgba(79, 172, 254, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(79, 172, 254, 0.05) 1px, transparent 1px);
     background-size: 30px 30px;
     animation: floatNode 6s ease-in-out infinite;
     z-index: 1;

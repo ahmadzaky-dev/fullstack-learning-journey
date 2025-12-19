@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Zaky & Fahria</title>
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;600&family=Cinzel:wght@700&family=Courier+Prime&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <div class="container" id="landing-container">
+        <div id="amplop" class="envelope-wrapper" onclick="toggleAmplop()">
+            <div class="envelope">
+                
+                <div class="inside-pocket"></div>
+                
+                <div class="letter">
+                    <div class="letter-content">
+                        <small>The Wedding of</small>
+                        <h2>Zaky & Fahria</h2>
+                        <div class="line"></div>
+                        <p>Minggu, 14 Desember 2025</p>
+                        <br>
+                        <button onclick="bukaUndangan(event)" class="btn-open">
+                            <i class="fas fa-envelope-open-text"></i> Buka Undangan
+                        </button>
+                    </div>
+                </div>
+
+                <div class="pocket"><div class="pocket-curve"></div></div>
+                <div class="flap"></div>
+                
+                <div class="heart-lock"><i class="fas fa-heart"></i><span class="initials">ZF</span></div>
+            </div>
+            
+            <p class="click-hint">Ketuk hati untuk membuka</p>
+        </div>
+    </div>
+
+
+    <div id="main-page" style="display: none;">
+
+        <header class="hero-section">
+            <div class="hero-overlay"></div>
+            
+            <div class="hero-content">
+                <div class="couple-avatar fade-up">
+                    <div class="avatar-frame">
+                        <img src="assets/pria.jpg" alt="Zaky" onerror="this.src='https://via.placeholder.com/150'">
+                    </div>
+                    <div class="avatar-frame">
+                        <img src="assets/wanita.jpg" alt="Fahria" onerror="this.src='https://via.placeholder.com/150'">
+                    </div>
+                </div>
+
+                <h4 class="fade-up" style="margin-top: 20px;">The Wedding of</h4>
+                <h1 class="title-name fade-up">Zaky & Fahria</h1>
+                <p class="fade-up">Minggu, 14 Desember 2025</p>
+
+                <div id="countdown" class="fade-up">
+                    <div class="time-box"><span id="days">00</span><small>Hari</small></div>
+                    <div class="time-box"><span id="hours">00</span><small>Jam</small></div>
+                    <div class="time-box"><span id="minutes">00</span><small>Menit</small></div>
+                    <div class="time-box"><span id="seconds">00</span><small>Detik</small></div>
+                </div>
+            </div>
+        </header>
+
+        <section class="content-section" id="gallery">
+            <h2 class="section-title fade-up">Our Moments</h2>
+            <p class="section-subtitle fade-up">Momen bahagia kami berdua</p>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item fade-up"><img src="assets/galeri1.jpg" alt="Momen 1"></div>
+                <div class="gallery-item fade-up"><img src="assets/galeri2.jpg" alt="Momen 2"></div>
+                <div class="gallery-item fade-up"><img src="assets/galeri3.jpg" alt="Momen 3"></div>
+                <div class="gallery-item fade-up"><img src="assets/galeri4.jpg" alt="Momen 4"></div>
+            </div>
+        </section>
+
+        <section class="content-section" id="gift">
+            <h2 class="section-title fade-up">Wedding Gift</h2>
+            <p class="section-subtitle fade-up">Doa restu Anda merupakan karunia yang sangat berarti bagi kami.</p>
+            
+            <button onclick="toggleGift()" class="btn-gift fade-up">
+                <i class="fas fa-gift"></i> Kirim Hadiah
+            </button>
+
+            <div id="bank-details" style="display: none; margin-top: 30px;">
+                <div class="atm-card fade-up">
+                    <div class="atm-head">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Bank_Central_Asia.svg" alt="BCA Logo" class="bank-logo-img">
+                        <span class="atm-chip"></span> 
+                    </div>
+                    
+                    <div class="atm-number">
+                        <span id="rek-bca" style="font-family: 'Courier Prime', monospace;">1234 5678 90</span>
+                        <i class="far fa-copy copy-icon" onclick="copyToClipboard('1234567890')" title="Salin"></i>
+                    </div>
+                    
+                    <div class="atm-holder">
+                        <span>Account Holder</span>
+                        <h3>AHMAD ZAKY</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section" id="location">
+            <h2 class="section-title fade-up">Lokasi Acara</h2>
+            <div class="location-box fade-up">
+                <div class="loc-info">
+                    <h3>Gedung Pernikahan Impian</h3>
+                    <p class="alamat">Jl. Jenderal Sudirman No. Kav 1, Jakarta Selatan, DKI Jakarta 12190</p>
+                    <div class="time-detail">
+                        <p><i class="far fa-clock"></i> <strong>Akad:</strong> 08.00 - 10.00 WIB</p>
+                        <p><i class="far fa-clock"></i> <strong>Resepsi:</strong> 11.00 - 13.00 WIB</p>
+                    </div>
+                    <a href="https://goo.gl/maps/contoh" target="_blank" class="btn-maps">
+                        <i class="fas fa-map-marker-alt"></i> Buka Google Maps
+                    </a>
+                </div>
+                <div class="loc-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.297746416173!2d106.82903207499039!3d-6.223847893764213!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3e4c4c23c1d%3A0x6a0a38e80556e42b!2sKuningan%2C%20Setiabudi%2C%20South%20Jakarta%20City%2C%20Jakarta!5e0!3m2!1sen!2sid!4v1703080000000!5m2!1sen!2sid" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <footer class="custom-footer">
+            <p>© 2025 Zaky & Fahria Wedding.</p>
+            
+            <div class="creator-sign">
+                Created with <i class="fas fa-heart text-danger"></i> by 
+                <a href="https://instagram.com/zakyhaddad4" target="_blank" class="creator-link">Ahmad Zaky</a>
+            </div>
+        
+            <div class="contact-buttons">
+                <a href="https://wa.me/6289685134848" target="_blank" class="contact-btn whatsapp">
+                    <i class="fab fa-whatsapp"></i> Hubungi Saya
+                </a>
+                <a href="https://instagram.com/zakyhaddad4" target="_blank" class="contact-btn instagram">
+                    <i class="fab fa-instagram"></i> @zakyhaddad4
+                </a>
+            </div>
+        </footer>
+    </div> 
+    <script src="script.js"></script>
+</body>
+</html>
