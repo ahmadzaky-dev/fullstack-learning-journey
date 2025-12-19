@@ -29,7 +29,7 @@ const myPortfolio = {
             title: "Wedding Website", 
             status: "Selesai", 
             desc: "Undangan interaktif dengan animasi amplop.",
-            link: "#",
+            link: "https://ahmadzaky-dev.github.io/fullstack-learning-journey/02-wedding-card/",
             image: "project2.png"
         }
     ],
